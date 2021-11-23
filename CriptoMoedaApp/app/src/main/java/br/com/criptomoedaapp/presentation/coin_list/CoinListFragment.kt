@@ -5,23 +5,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.criptomoedaapp.databinding.FragmentListCoinBinding
+import br.com.criptomoedaapp.presentation.BaseFragment
 import br.com.criptomoedaapp.presentation.adapter.CoinAdapter
 import br.com.criptomoedaapp.presentation.adapter.CoinListClickListener
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 
 @AndroidEntryPoint
-class CoinListFragment : Fragment() {
-
-    private var _binding: FragmentListCoinBinding? = null
-    private val binding: FragmentListCoinBinding get() = _binding!!
+class CoinListFragment : BaseFragment<FragmentListCoinBinding>() {
 
     private val viewModel: CoinListViewModel by viewModels()
     private val coinAdapter: CoinAdapter by lazy {
@@ -67,17 +64,8 @@ class CoinListFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(
+    override fun getViewBinding(
         inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentListCoinBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
+        container: ViewGroup?
+    ): FragmentListCoinBinding = FragmentListCoinBinding.inflate(inflater, container, false)
 }

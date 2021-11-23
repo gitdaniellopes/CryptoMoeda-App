@@ -31,7 +31,7 @@ fun TextView.setCoinSymbol(coin: Coin?) {
 fun Chip.setCoinActive(coin: Coin?) {
     coin?.let {
         if (it.isActive) {
-            text = context.getString(R.string.actived)
+            text = context.getString(R.string.active)
             setChipBackgroundColorResource(R.color.green)
         } else {
             text = context.getString(R.string.Inactive)

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CriptoMoedaApp</string>
-    <string name="actived">Ativo</string>
+    <string name="app_name">Cripto Moedas</string>
+    <string name="active">Ativo</string>
     <string name="Inactive">Inativo</string>
 </resources>

@@ -59,7 +59,7 @@ class CoinListFragment : BaseFragment<FragmentListCoinBinding>() {
                         binding.progressBar.visibility = View.INVISIBLE
                     }
                 }
-                coinAdapter.coins = state.coins.toList()
+                coinAdapter.submitList(state.coins.toList())
             }
         }
     }

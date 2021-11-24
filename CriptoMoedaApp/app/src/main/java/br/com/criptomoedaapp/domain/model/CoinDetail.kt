@@ -12,6 +12,6 @@ data class CoinDetail(
     val tags: List<String>,
     val team: List<TeamMember>
 ){
-    fun getTeamCount() = team.size
     fun getTagCount() = tags.size
+    fun getTeamCount() = team.size
 }

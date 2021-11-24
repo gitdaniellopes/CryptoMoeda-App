@@ -2,4 +2,6 @@
     <string name="app_name">Cripto Moedas</string>
     <string name="active">Ativo</string>
     <string name="Inactive">Inativo</string>
+    <string name="tv_content_tag">Tags</string>
+    <string name="total_members">Total de membros:</string>
 </resources>

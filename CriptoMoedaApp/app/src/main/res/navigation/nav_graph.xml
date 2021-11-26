@@ -23,7 +23,7 @@
         android:name="br.com.criptomoedaapp.presentation.coin_detail.CoinDetailFragment"
         android:label="CoinDetailFragment" >
         <argument
-            android:name="id"
+            android:name="coinId"
             app:argType="string" />
     </fragment>
 </navigation>

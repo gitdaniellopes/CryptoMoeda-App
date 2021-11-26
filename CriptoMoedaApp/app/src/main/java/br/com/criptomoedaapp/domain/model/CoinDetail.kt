@@ -9,9 +9,9 @@ data class CoinDetail(
     val symbol: String,
     val rank: Int,
     val isActive: Boolean,
-    val tags: List<String>,
+    val tags: List<String>? = null,
     val team: List<TeamMember>
 ){
-    fun getTagCount() = tags.size
+    fun getTagCount() = tags?.size
     fun getTeamCount() = team.size
 }

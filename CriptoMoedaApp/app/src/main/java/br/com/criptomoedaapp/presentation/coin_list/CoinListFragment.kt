@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.criptomoedaapp.databinding.FragmentListCoinBinding
@@ -16,6 +17,7 @@ import br.com.criptomoedaapp.presentation.adapter.CoinAdapter
 import br.com.criptomoedaapp.presentation.adapter.CoinListClickListener
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
+
 
 @AndroidEntryPoint
 class CoinListFragment : BaseFragment<FragmentListCoinBinding>() {

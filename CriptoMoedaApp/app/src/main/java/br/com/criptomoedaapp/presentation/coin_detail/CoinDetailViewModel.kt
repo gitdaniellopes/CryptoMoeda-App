@@ -20,6 +20,9 @@ import javax.inject.Inject
  *
  * o id vai estar contido nesse estado de instancia salvo e então passamos ele apenas para o nosso viewModel
  *
+ * No fragmento que recebe esse arqgumento, eu preciso apenas colocar:
+ * exemplo: private val args: CoinDetailFragmentArgs by navArgs() - args.coinId
+ * lembrando que o parametro deve ser exatamente igual.
  * */
 
 @HiltViewModel
@@ -38,7 +41,7 @@ class CoinDetailViewModel @Inject constructor(
     }
 
     private fun getCoins(coinId: String) {
-        useCase(coinId = coinId).onEach { result ->
+        useCase(coinId).onEach { result ->
             when (result) {
                 is NetworkResponse.Success -> {
                     _state.value = CoinDetailState(coin = result.data)

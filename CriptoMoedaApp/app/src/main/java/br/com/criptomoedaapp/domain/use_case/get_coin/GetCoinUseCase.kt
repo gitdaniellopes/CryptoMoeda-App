@@ -1,5 +1,6 @@
 package br.com.criptomoedaapp.domain.use_case.get_coin
 
+import android.util.Log
 import br.com.criptomoedaapp.common.NetworkResponse
 import br.com.criptomoedaapp.data.remote.response.toCoinDetail
 import br.com.criptomoedaapp.domain.model.CoinDetail
@@ -17,6 +18,7 @@ class GetCoinUseCase @Inject constructor(
         try {
             emit(NetworkResponse.Loading())
             val coin = repository.getCoinById(coinId).toCoinDetail()
+            Log.d("COIN","invoke: $coin")
             emit(NetworkResponse.Success(coin))
         } catch (e: HttpException) {
             emit(NetworkResponse.Error(e.localizedMessage ?: "Um erro inesperado aconteceu"))

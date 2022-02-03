@@ -20,6 +20,7 @@ Procurei utilizar as tecnologias mais pedidas em alguma das vagas para desenvolv
 * Live Data
 * Coroutines
 * Retrofit
+* Databinding
 * Dagger Hilt
 * Clean Architecture - Use cases
 * State
